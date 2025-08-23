@@ -1,62 +1,70 @@
-﻿# Design_Patterns
+# SOLID Principles
 
-SOLID Principles
-SOLID is an acronym for five key object-oriented design principles introduced by Robert C. Martin (Uncle Bob). These principles help developers create software that is modular, maintainable, flexible, and scalable.
+SOLID is a set of five object-oriented design principles that help create robust, maintainable, and scalable software. Understanding and applying SOLID makes your codebase easier to understand, extend, and refactor.
 
-What are SOLID Principles?
-SOLID stands for:
+## Table of Contents
 
-S: Single Responsibility Principle (SRP)
+- [Single Responsibility Principle (SRP)](#single-responsibility-principle-srp)
+- [Open/Closed Principle (OCP)](#openclosed-principle-ocp)
+- [Liskov Substitution Principle (LSP)](#liskov-substitution-principle-lsp)
+- [Interface Segregation Principle (ISP)](#interface-segregation-principle-isp)
+- [Dependency Inversion Principle (DIP)](#dependency-inversion-principle-dip)
+- [Why Use SOLID?](#why-use-solid)
+- [References](#references)
 
-O: Open/Closed Principle (OCP)
+---
 
-L: Liskov Substitution Principle (LSP)
+## Single Responsibility Principle (SRP)
 
-I: Interface Segregation Principle (ISP)
+A class should have one, and only one, reason to change.
+- Each class should focus on a single responsibility or functionality.
+- Avoid classes that handle unrelated problems.
 
-D: Dependency Inversion Principle (DIP)
+---
 
-1. Single Responsibility Principle (SRP)
-Definition:
-A class should have one and only one reason to change, meaning it should have only one job or responsibility.
+## Open/Closed Principle (OCP)
 
-Example:
-Separate data management from business logic. If a class handles multiple responsibilities, refactor it so each class addresses only one concern.
+Software entities should be **open for extension, but closed for modification**.
+- Extend existing code by adding new functionality, not by altering current code.
+- Use abstraction and interfaces to support extension.
 
-2. Open/Closed Principle (OCP)
-Definition:
-Software entities (classes, modules, functions) should be open for extension but closed for modification.
+---
 
-Example:
-Add new functionality by creating new classes or methods, not by modifying existing code. Favor abstraction and inheritance over modifying concrete implementations.
+## Liskov Substitution Principle (LSP)
 
-3. Liskov Substitution Principle (LSP)
-Definition:
-Objects of a superclass should be replaceable with objects of a subclass without altering the correctness of the program.
+Objects of a superclass should be replaceable with objects of a subclass without affecting the correctness.
+- Subclasses must not break the behavior expected by the parent class.
+- Ensure derived classes enhance, not reduce, functionality.
 
-Example:
-Subclasses should override the parent class methods in a way that does not break behavior for the client code using the superclass reference.
+---
 
-4. Interface Segregation Principle (ISP)
-Definition:
-No client should be forced to depend on methods it does not use. Split large interfaces into smaller, more specific ones.
+## Interface Segregation Principle (ISP)
 
-Example:
-Design smaller interfaces tailored to individual client needs instead of one generic interface with unused methods.
+No client should be forced to depend on methods it does not use.
+- Split large interfaces into smaller, specific ones.
+- Avoid “fat” interfaces that include unused functions.
 
-5. Dependency Inversion Principle (DIP)
-Definition:
-Depend upon abstractions, not concretions. High-level modules should not depend on low-level ones. Both should depend on abstractions.
+---
 
-Example:
-Use interfaces or abstract classes for dependencies so you can easily swap implementations (e.g., for tests or scaling).
+## Dependency Inversion Principle (DIP)
 
-Why Use SOLID?
-Improves code maintainability and readability
+High-level modules should depend on abstractions, not concrete implementations.
+- Use interfaces and abstract classes to depend on abstractions.
+- Enables easier swapping and testing of dependencies.
 
-Helps manage complexity as projects grow
+---
 
-Makes code easier to test, refactor, and extend
+## Why Use SOLID?
 
-Reduces code smells and technical debt
+- Improves maintainability and scalability
+- Simplifies testing and refactoring
+- Reduces technical debt and code smells
+
+---
+
+## References
+
+- [Digital Ocean: SOLID - The First Five Principles](https://www.digitalocean.com/community/conceptual-articles/s-o-l-i-d-the-first-five-principles-of-object-oriented-design)
+- [Baeldung: A Solid Guide to SOLID Principles](https://www.baeldung.com/solid-principles)
+- [FreeCodeCamp: How to Write a Good README](https://www.freecodecamp.org/news/how-to-write-a-good-readme-file/)
 
